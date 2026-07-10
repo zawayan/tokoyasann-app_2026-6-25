@@ -1,0 +1,60 @@
+body {
+    font-family: sans-serif;
+    max-width: 500px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px; 
+}
+
+input {
+    width: 100px;
+    padding: 5px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.status{
+    margin-top: 15px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.update {
+    margin-top: 15px;
+    color:  gray;
+    font-size: 16px;
+}
+
+.ReceptionHours {
+    text-decoration: underline;
+    color: red;
+    display: inline-block;
+}
+
+.countButton{
+    width: 70px;
+    height: 70px;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.countButton:hover {
+    background-color: #ddd;
+}
+
+.countButton:active {
+    transform: scale(0.95);
+}
