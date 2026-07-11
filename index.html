@@ -1,17 +1,48 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charaset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>床屋さん待ち時間アプリ</title>
 
-<link rel="styleseet" href="style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body> 
 <div class="container">
-    <h1>💈✂️床屋さん待ち時間アプリ✂️💈</h1>
-    <p>現在の待ち人数</p>
-    <p>およその待ち時間</p>
+    <h2>💈床屋さん待ち時間アプリ💈</h2>
+    <h1>ようこそいらっしゃい！💇‍♂️</h1>
+    <h3>⭐︎毎週月曜日、毎月第3月曜日・火曜日は連休</h3>
+    <h3>✂︎開店時間　9:00~18:00 <div class="ReceptionHours">（最終受付16:30）</div></h3>
+    <h2>待ち人数</h2>
+    
+    <button class="countButton" onclick="decreaseCount()">-</button>
+    <input type="number" id="waitingCount" min="0" value="0">
+    <button class="countButton" onclick="increaseCount()">+</button>
+
+    <div class="result">
+        <span id="resultLabel">目安待ち時間:</span> 
+        <span id="resultTime">0分</span>
+    </div>
+    
+    <br>
+
+    <div class="status" id="status"></div>
+
+    <div class="update" id="update">
+    最終更新日時：ーーー
+    </div>
+    
 </div>
+
+<script src="script.js"></script>
+
 </body>
+</html>
+
+
+
+
+
+
+<!-- python3 -m http.server 8082-->

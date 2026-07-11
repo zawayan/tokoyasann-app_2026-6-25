@@ -1,0 +1,75 @@
+body {
+    font-family: sans-serif;
+    max-width: 500px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px; 
+}
+
+input {
+    width: 100px;
+    padding: 5px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.status{
+    margin-top: 15px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.update {
+    margin-top: 15px;
+    color:  gray;
+    font-size: 16px;
+}
+
+.ReceptionHours {
+    text-decoration: underline;
+    color: red;
+    display: inline-block;
+}
+
+.countButton{
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+    font-weight: bold;
+    border-radius: 15px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    padding: 0;
+    cursor: pointer;
+}
+
+input {
+    width: 80px;
+    height: 80px;
+    font-size: 36px;
+    text-align: center;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.countButton:hover {
+    background-color: #ddd;
+}
+
+.countButton:active {
+    transform: scale(0.95);
+}
+
+
