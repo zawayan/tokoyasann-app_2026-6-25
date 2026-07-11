@@ -35,8 +35,8 @@ function updateTime() {
         String(now.getMonth() + 1 ).padStart(2, "0") + "/" +
         String(now.getDate()).padStart(2, "0") + " " +
         String(now.getHours()).padStart(2, "0") + ":" +
-        String(now.getMinutes()).padStart(2, "0") + : +
-        String(now.getMinutes()).padStart(2,0)
+        String(now.getMinutes()).padStart(2, "0") + ":" +
+        String(now.getMinutes()).padStart(2,"0")
 
     document.getElementById("update").textContent =
         "最終更新日時:" + time;
@@ -48,6 +48,7 @@ function increaseCount() {
     input.value = Number(input.value) + 1;
 
     calculateWaitTime();
+    updateTime();
 }
 
 function decreaseCount() {
