@@ -27,7 +27,7 @@ function calculateWaitTime() {
         status.style.color = "red";
     }
 }
-
+function updateTime() {
     const now = new Date();
 
     const time =
@@ -35,13 +35,14 @@ function calculateWaitTime() {
         String(now.getMonth() + 1 ).padStart(2, "0") + "/" +
         String(now.getDate()).padStart(2, "0") + " " +
         String(now.getHours()).padStart(2, "0") + ":" +
-        String(now.getMinutes()).padStart(2, "0");
+        String(now.getMinutes()).padStart(2, "0") + : +
+        String(now.getMinutes()).padStart(2,0)
 
     document.getElementById("update").textContent =
         "最終更新日時:" + time;
 
 }
-
+}
 function increaseCount() {
     const input = document.getElementById("waitingCount");
     input.value = Number(input.value) + 1;
@@ -56,6 +57,7 @@ function decreaseCount() {
     }
 
     calculateWaitTime();
+    updateTime();
 }
 
 
