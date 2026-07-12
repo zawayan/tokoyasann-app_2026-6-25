@@ -50,19 +50,21 @@ function calculateWaitTime() {
     } else {
     resultTime.textContent = "~" + waitTime + "分";
 
-    if(count <= 2) {
-        resultTime.style.color = "blue";
-        status.textContent = "🔵　空いています";
-        status.style.color = "blue";
-    } else if (count <= 4) {
-        resultTime.style.color = "orange";
-        status.textContent = "🟠　少しお待ちいただきます";
-        status.style.color = "orange";
-    } else {
-        resultTime.style.color = "red";
-        status.textContent = "🔴　とても混雑しています🙇";
-        status.style.color = "red";
-    }
+    if (count <= 2) {
+    resultTime.style.color = "blue";
+    status.textContent = "✂️ 現在カット中です　🔵👤待ち人数：" + count + "人";
+    status.style.color = "blue";
+
+} else if (count <= 4) {
+    resultTime.style.color = "orange";
+    status.textContent = "✂️ 現在カット中です　🟢👤待ち人数：" + count + "人";
+    status.style.color = "orange";
+
+} else {
+    resultTime.style.color = "red";
+    status.textContent = "✂️ 現在カット中です　🔴👤待ち人数：" + count + "人";
+    status.style.color = "red";
+}
     }
 }
     
