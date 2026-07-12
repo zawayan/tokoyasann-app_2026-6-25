@@ -25,9 +25,7 @@ body {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
-.countArea input { 
-    width: 110px;
-    height: 300px;
+input { 
     font-size: 48px;
     border: 2px solid #ccc;
     text-align: center;
@@ -38,6 +36,12 @@ body {
     margin: 0;
     background-color: white;
 }
+
+#waitingCount {
+    width: 110px !important;
+    height: 110px !important;
+    font-size: 48px !important;
+    }
 
 .result {
     margin-top: 20px;
