@@ -1,4 +1,23 @@
-    let isCutting = false;
+   function resetApp() {
+
+    if (!confirm("本当にリセットしますか？")) {
+        return;
+    }
+
+    document.getElementById("waitingCount").value = 0;
+
+    isCutting = false;
+    cutStartTime = null;
+
+    updateElapsedTime();
+    calculateWaitTime();
+
+    document.getElementById("update").textContent =
+        "最終更新日時：ーーー";
+}
+   
+   
+   let isCutting = false;
 
     let cutStartTime = null;
     let elapsedTimer = null;
@@ -147,6 +166,28 @@ function decreaseCount() {
         updateElapsedTime();
         elapsedTimer = setInterval(updateElapsedTime, 1000);
 
+function resetApp() {
 
+    // 待ち人数を0人にする
+    document.getElementById("waitingCount").value = 0;
 
+    // カット状態をリセット
+    isCutting = false;
+    cutStartTime = null;
+
+    // 経過時間を初期化
+    updateElapsedTime();
+
+    // 待ち時間表示を初期化
+    calculateWaitTime();
+
+    // 更新日時を初期状態に戻す
+    document.getElementById("update").textContent =
+        "最終更新日時：ーーー";
+
+}
+
+localStorage.removeItem("waitingCount");
+localStorage.removeItem("isCutting");
+localStorage.removeItem("cutStartTime");
 
