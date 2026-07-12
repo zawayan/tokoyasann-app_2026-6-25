@@ -130,7 +130,6 @@ function decreaseCount() {
     }
         updateElapsedTime();
         elapsedTimer = setInterval(updateElapsedTime, 1000);
-        setInterval(updateTime, 1000);
 
 
 
