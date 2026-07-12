@@ -117,18 +117,18 @@ function decreaseCount() {
         if (Number(input.value) > 0) {
             input.value = Number(input.value) - 1;
 
-
             cutStartTime = Date.now();
         } else {
             isCutting = false;
             cutStartTime = null;
         }
-
+        updateElapsedTime();
         calculateWaitTime();
         updateTime();
     }
         updateElapsedTime();
         elapsedTimer = setInterval(updateElapsedTime, 1000);
+        setInterval(updateTime, 1000);
 
 
 
