@@ -1,7 +1,8 @@
 body {
     font-family: sans-serif;
-    max-width: 500px;
-    margin: 50px auto;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 30px 15px;
     text-align: center;
 }
 
@@ -14,10 +15,16 @@ body {
 }
 
 .container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: white;
     border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 10px; 
+    padding: 25px;
+    border-radius: 20px; 
+    box-sizing: border-box;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
+
 
 .result {
     margin-top: 20px;
