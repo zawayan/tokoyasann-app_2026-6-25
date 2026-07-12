@@ -96,6 +96,7 @@ function increaseCount() {
     updateElapsedTime();
 }
 
+/*
 function decreaseCount() {
     const input = document.getElementById("waitingCount");
     if (Number(input.value) > 0) {
@@ -105,6 +106,7 @@ function decreaseCount() {
     updateTime();
     updateElapsedTime();
     }
+*/
 
     function finishCut() {
         const input =
