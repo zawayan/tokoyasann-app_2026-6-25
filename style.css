@@ -61,6 +61,29 @@ input {
     font-size: 24px;
 }
 
+.finishButton {
+    width: 300px;
+    height: 90px;
+    font-size: 32px;
+    font-weight: bold;
+    border: none;
+    border-radius: 18px;
+    background-color: #2e8b57;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin-top: 20px;
+}
+
+.finishButton:hover {
+    background-color: #267349;
+}
+
+.finishButton:active {
+    transform: scale(0.95);
+}
+
+
 .status{
     margin-top: 15px;
     font-size: 22px;
