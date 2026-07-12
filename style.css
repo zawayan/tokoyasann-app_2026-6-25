@@ -26,9 +26,9 @@ body {
 }
 
 input { 
-    width: 90px;
-    height: 90px;
-    font-size: 40px;
+    width: 110px;
+    height: 110px;
+    font-size: 48px;
     border: 2px solid #ccc;
     text-align: center;
     font-weight: bold;
