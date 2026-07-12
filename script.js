@@ -149,6 +149,8 @@ function decreaseCount() {
 
 function resetApp() {
 
+    if (!confirm("アプリをリセットしますか？\n※待ち人数やカット状態が初期化されます。")) {
+
     // 待ち人数を0人にする
     document.getElementById("waitingCount").value = 0;
 
