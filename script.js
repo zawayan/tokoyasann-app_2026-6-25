@@ -26,48 +26,62 @@
     }
 
 function calculateWaitTime() {
-    const count = Number(document.getElementById("waitingCount").value);
+    const count = Number(
+        document.getElementById("waitingCount").value
+    );
+
     const status = document.getElementById("status");
-    const waitTime = count * 90;
     const resultTime = document.getElementById("resultTime");
+    const waitTime = count * 90;
 
-    if (isCutting && count === 0) {
+    // カットしていない状態
+    if (!isCutting) {
+        resultTime.textContent = "0分";
+        resultTime.style.color = "black";
 
-    resultTime.textContent = "0分";
-    resultTime.style.color = "green";
+        status.textContent = "⚫️ 現在、待ち時間なし";
+        status.style.color = "black";
 
-    status.textContent = "✂️ 現在カット中です";
-    status.style.color = "green";
+    // カット中で待ち人数が0人
+    } else if (count === 0) {
+        resultTime.textContent = "0分";
+        resultTime.style.color = "green";
 
-} else if (!isCutting && count === 0) {
+        status.textContent =
+            "✂️ 現在カット中です　👤待ち人数：0人";
+        status.style.color = "green";
 
-    resultTime.textContent = "0分";
-    resultTime.style.color = "black";
+    // カット中で待ち人数が1〜2人
+    } else if (count <= 2) {
+        resultTime.textContent = "約" + waitTime + "分";
+        resultTime.style.color = "blue";
 
-    status.textContent = "⚫️ 現在、待ち時間なし";
-    status.style.color = "black";
+        status.textContent =
+            "✂️ 現在カット中です　🔵👤待ち人数：" +
+            count + "人";
+        status.style.color = "blue";
 
+    // カット中で待ち人数が3〜4人
+    } else if (count <= 4) {
+        resultTime.textContent = "約" + waitTime + "分";
+        resultTime.style.color = "orange";
+
+        status.textContent =
+            "✂️ 現在カット中です　🟠👤待ち人数：" +
+            count + "人";
+        status.style.color = "orange";
+
+    // カット中で待ち人数が5人以上
     } else {
-    resultTime.textContent = "~" + waitTime + "分";
+        resultTime.textContent = "約" + waitTime + "分";
+        resultTime.style.color = "red";
 
-    if (count <= 2) {
-    resultTime.style.color = "blue";
-    status.textContent = "✂️ 現在カット中です　🔵👤待ち人数：" + count + "人";
-    status.style.color = "blue";
-
-} else if (count <= 4) {
-    resultTime.style.color = "orange";
-    status.textContent = "✂️ 現在カット中です　🟢👤待ち人数：" + count + "人";
-    status.style.color = "orange";
-
-} else {
-    resultTime.style.color = "red";
-    status.textContent = "✂️ 現在カット中です　🔴👤待ち人数：" + count + "人";
-    status.style.color = "red";
-}
+        status.textContent =
+            "✂️ 現在カット中です　🔴👤待ち人数：" +
+            count + "人";
+        status.style.color = "red";
     }
-}
-    
+}    
 function updateTime() {
     const now = new Date();
 
