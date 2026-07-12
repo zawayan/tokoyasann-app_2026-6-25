@@ -32,7 +32,8 @@ function calculateWaitTime() {
 
     const status = document.getElementById("status");
     const resultTime = document.getElementById("resultTime");
-    const waitTime = count * 90;
+    const totalPeople = isCutting ? count + 1 : count;
+    const waitTime = totalPeople * 90;
 
     // カットしていない状態
     if (!isCutting) {
@@ -43,8 +44,8 @@ function calculateWaitTime() {
         status.style.color = "black";
 
     // カット中で待ち人数が0人
-    } else if (count === 0) {
-        resultTime.textContent = "0分";
+        } else if (count === 0) {
+        resultTime.textContent = "約" + waitTime + "分";
         resultTime.style.color = "green";
 
         status.textContent =
