@@ -16,10 +16,12 @@
     <h3>✂︎開店時間　9:00~18:00 <div class="ReceptionHours">（最終受付16:30）</div></h3>
     <h2>待ち人数</h2>
     
-    <div class="countArea"></div>
+<div class="countArea">
     <button class="countButton" onclick="decreaseCount()">ー</button>
     <input type="number" id="waitingCount" min="0" value="0" readonly>
     <button class="countButton" onclick="increaseCount()">+</button>
+</div>
+    
     <div class="result">
         <span id="resultLabel">目安待ち時間:</span> 
         <span id="resultTime">0分</span>
