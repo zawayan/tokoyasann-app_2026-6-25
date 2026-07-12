@@ -148,30 +148,32 @@ function decreaseCount() {
         elapsedTimer = setInterval(updateElapsedTime, 1000);
 
 function resetApp() {
-
-    if (!confirm("アプリをリセットしますか？\n※待ち人数やカット状態が初期化されます。")) {
+    if (!confirm(
+        "アプリをリセットしますか？\n" +
+        "※待ち人数やカット状態が初期化されます。"
+    )) {
         return;
-    }    // 待ち人数を0人にする
+    }
+
+    // 待ち人数を0人にする
     document.getElementById("waitingCount").value = 0;
 
     // カット状態をリセット
     isCutting = false;
     cutStartTime = null;
 
-    // 経過時間を初期化
+    // カット経過時間を初期化
     updateElapsedTime();
 
-    // 待ち時間表示を初期化
+    // 待ち時間と状態表示を初期化
     calculateWaitTime();
 
     // 更新日時を初期状態に戻す
     document.getElementById("update").textContent =
         "最終更新日時：ーーー";
 
-
-localStorage.removeItem("waitingCount");
-localStorage.removeItem("isCutting");
-localStorage.removeItem("cutStartTime");
+    // 保存データを削除
+    localStorage.removeItem("waitingCount");
+    localStorage.removeItem("isCutting");
+    localStorage.removeItem("cutStartTime");
 }
-
-
