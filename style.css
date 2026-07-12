@@ -46,7 +46,11 @@ input {
     max-height: 110px;
     flex-shrink: 0;
     font-size: 48px;
-
+    text-align: center;
+    padding: 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 18px;
     }
 
 .result {
