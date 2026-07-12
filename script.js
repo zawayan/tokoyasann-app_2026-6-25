@@ -40,7 +40,7 @@ function updateTime() {
         String(now.getSeconds()).padStart(2, "0");
         
     document.getElementById("update").textContent =
-        "最終更新日時:" + time;
+        "最終更新日時：" + time;
 
 }
 
