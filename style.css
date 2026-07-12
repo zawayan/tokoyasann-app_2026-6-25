@@ -62,9 +62,7 @@ input {
     text-align: center;
     border-radius: 10px;
     box-sizing: border-box;
-    line-height: 80px;
-    display: block;
-    margin: 15px auto;
+    margin: 0;
     padding: 0;
 }
 
