@@ -27,7 +27,7 @@ body {
 
 input { 
     width: 110px;
-    height: 110px;
+    height: 300px;
     font-size: 48px;
     border: 2px solid #ccc;
     text-align: center;
