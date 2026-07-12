@@ -38,9 +38,9 @@ input {
 }
 
 #waitingCount {
-    width: 50px !important;
-    height: 10px !important;
-    font-size: 48px !important;
+    width: 110px ;
+    height: 110px ;
+    font-size: 48px ;
     }
 
 .result {
