@@ -62,7 +62,8 @@ input {
     text-align: center;
     border-radius: 10px;
     box-sizing: border-box;
-    align-items: center;
+    display: block;
+    margin: 15px auto;
 }
 
 .countButton:hover {
