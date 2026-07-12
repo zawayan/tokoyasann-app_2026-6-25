@@ -17,7 +17,7 @@
             );
 
             const minutes = Math.floor(elapsedSeconds / 60);
-            const getSeconds = elapsedSeconds % 60;
+            const seconds = elapsedSeconds % 60;
 
             elapsedTime.textContent =
                 "カット経過時間：" +
@@ -31,11 +31,22 @@ function calculateWaitTime() {
     const waitTime = count * 90;
     const resultTime = document.getElementById("resultTime");
 
-    if (count === 0) {
-        resultTime.textContent = "0分";
-        status.textContent = "⚫️ 現在、待ち時間なし";
-        resultTime.style.color = "black";
-        status.style.color = "black";
+    if (isCutting && count === 0) {
+
+    resultTime.textContent = "0分";
+    resultTime.style.color = "green";
+
+    status.textContent = "✂️ 現在カット中です";
+    status.style.color = "green";
+
+} else if (!isCutting && count === 0) {
+
+    resultTime.textContent = "0分";
+    resultTime.style.color = "black";
+
+    status.textContent = "⚫️ 現在、待ち時間なし";
+    status.style.color = "black";
+
     } else {
     resultTime.textContent = "~" + waitTime + "分";
 
@@ -73,14 +84,13 @@ function updateTime() {
 
 function increaseCount() {
     const input = document.getElementById("waitingCount");
-
     if (!isCutting) {
         isCutting = true;
         cutStartTime = Date.now();
-        input.value = 0;    
+        input.value = 0;
     } else {
         input.value = Number(input.value) + 1;
-    }
+    }  
     calculateWaitTime();
     updateTime();
 }
@@ -92,6 +102,7 @@ function decreaseCount() {
     }
     calculateWaitTime();
     updateTime();
+    updateElapsedTime();
     }
 
     function finishCut() {
@@ -109,7 +120,7 @@ function decreaseCount() {
             cutStartTime = Date.now();
         } else {
             isCutting = false;
-            isStartime = null;
+            cutStartTime = null;
         }
 
         calculateWaitTime();
