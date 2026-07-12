@@ -2,7 +2,6 @@ function calculateWaitTime() {
     const count = Number(document.getElementById("waitingCount").value);
     const status = document.getElementById("status");
     const waitTime = count * 90;
-    const resultLabel = document.getElementById("resultLabel");
     const resultTime = document.getElementById("resultTime");
 
     if (count === 0) {
@@ -57,7 +56,7 @@ function decreaseCount() {
     if (Number(input.value) > 0) {
         input.value = Number(input.value) - 1;
     }
-function calculateWaitTime(){
+    calculateWaitTime();
     updateTime();
     }
-}
+
