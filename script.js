@@ -93,7 +93,7 @@ function increaseCount() {
     }  
     calculateWaitTime();
     updateTime();
-    uupdateElapsedTime();
+    updateElapsedTime();
 }
 
 function decreaseCount() {
@@ -126,8 +126,9 @@ function decreaseCount() {
 
         calculateWaitTime();
         updateTime();
+    }
         updateElapsedTime();
         elapsedTimer = setInterval(updateElapsedTime, 1000);
-    }
+
 
 
