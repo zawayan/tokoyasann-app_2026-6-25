@@ -1,23 +1,4 @@
-   function resetApp() {
-
-    if (!confirm("本当にリセットしますか？")) {
-        return;
-    }
-
-    document.getElementById("waitingCount").value = 0;
-
-    isCutting = false;
-    cutStartTime = null;
-
-    updateElapsedTime();
-    calculateWaitTime();
-
-    document.getElementById("update").textContent =
-        "最終更新日時：ーーー";
-}
-   
-   
-   let isCutting = false;
+    let isCutting = false;
 
     let cutStartTime = null;
     let elapsedTimer = null;
@@ -185,9 +166,10 @@ function resetApp() {
     document.getElementById("update").textContent =
         "最終更新日時：ーーー";
 
-}
 
 localStorage.removeItem("waitingCount");
 localStorage.removeItem("isCutting");
 localStorage.removeItem("cutStartTime");
+}
+
 
